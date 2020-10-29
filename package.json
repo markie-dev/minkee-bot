@@ -1,0 +1,33 @@
+{
+  "name": "trieulootwittertracker",
+  "version": "1.0.0",
+  "description": "twitter bot for tracking trieuloo's league of legends ranked games",
+  "main": "index.js",
+  "scripts": {
+    "test": "node run index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreidimaano/TrieulooTwitterTracker.git"
+  },
+  "keywords": [
+    "riot",
+    "leagueoflegends",
+    "riotgames",
+    "twitter",
+    "api"
+  ],
+  "author": "Andrei Dimaano, Alfred Zhuang, Tyler Cheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreidimaano/TrieulooTwitterTracker/issues"
+  },
+  "homepage": "https://github.com/andreidimaano/TrieulooTwitterTracker#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "dotenv": "^8.2.0",
+    "nedb": "^1.8.0",
+    "requirejs": "^2.3.6",
+    "twit": "^2.2.11"
+  }
+}
