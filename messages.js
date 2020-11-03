@@ -18,10 +18,6 @@ async function getMessage() {
     message += "\n\nLOL you lost again?? \n\n";
   }
 
-  if (gameData.queueType == "CLASSIC") {
-    message += "\n\n(NORMAL GAME) \n\n";
-  }
-
   message += "@minkeekang stats: \n";
   let gameStat = Object.entries(gameData);
   let gameId = gameData.gameId;
