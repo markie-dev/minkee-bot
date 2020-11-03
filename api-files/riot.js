@@ -62,7 +62,7 @@ async function getMatchData(gameId, summonerId, champId) {
   let queueType;
 
   for (i in currentRank.data) {
-    if (currentRank.data[i].queueId == "420") {
+    if (currentRank.data[i].queueType == "RANKED_SOLO_5x5") {
       tier = currentRank.data[i].tier;
       rank = currentRank.data[i].rank;
       lp = currentRank.data[i].leaguePoints;
