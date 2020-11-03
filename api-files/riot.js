@@ -46,6 +46,7 @@ async function getMatchData(gameId, summonerId, champId) {
   let kda =
     (participant.stats.kills + participant.stats.assists) /
     participant.stats.deaths;
+  let queueId = body.queueId;
   let cs = (
     (participant.stats.totalMinionsKilled +
       participant.stats.neutralMinionsKilled) /
@@ -59,14 +60,12 @@ async function getMatchData(gameId, summonerId, champId) {
   let rank;
   let lp;
   let winloss;
-  let queueId;
 
   for (i in currentRank.data) {
     if (currentRank.data[i].queueType == "RANKED_SOLO_5x5") {
       tier = currentRank.data[i].tier;
       rank = currentRank.data[i].rank;
       lp = currentRank.data[i].leaguePoints;
-      queueId = currentRank.data[i].queueId;
       winloss = `${currentRank.data[i].wins}W ${currentRank.data[i].losses}L`;
     }
   }
