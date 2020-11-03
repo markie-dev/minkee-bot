@@ -31,6 +31,9 @@ async function getMessage() {
   for (i = 4; i < 7; i++) {
     message += gameStat[i][0] + ": " + gameStat[i][1] + "\n";
   }
+  for (i = 5; i < 8; i++) {
+    message += gameStat[i][0] + ": " + gameStat[i][1] + "\n";
+  }
 
   message +=
     "\n" + gameStat[2][1] + " / " + gameStat[3][0] + ": " + gameStat[3][1];
