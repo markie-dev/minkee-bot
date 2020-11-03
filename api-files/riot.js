@@ -60,6 +60,7 @@ async function getMatchData(gameId, summonerId, champId) {
   let rank;
   let lp;
   let winloss;
+  let queueType;
 
   for (i in currentRank.data) {
     if (currentRank.data[i].queueType == "RANKED_SOLO_5x5") {
@@ -67,6 +68,14 @@ async function getMatchData(gameId, summonerId, champId) {
       rank = currentRank.data[i].rank;
       lp = currentRank.data[i].leaguePoints;
       winloss = `${currentRank.data[i].wins}W ${currentRank.data[i].losses}L`;
+    }
+
+    if (queueId == 420) {
+      queueType = "RANKED GAME";
+    }
+
+    if (queueId == 400) {
+      queueType = "NORMAL GAME";
     }
   }
 
@@ -78,7 +87,7 @@ async function getMatchData(gameId, summonerId, champId) {
     WL: winloss,
     dmgDealt: totalDamageDealtToChampions,
     kda: `${kdaSpread} (${kda})`,
-    queueId: queueId,
+    queueType: queueType,
     csPerMin: cs,
   };
 
